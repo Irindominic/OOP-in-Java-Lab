@@ -2,9 +2,9 @@ abstract class Shape
 { 
    abstract void numberOfSides(); 
    abstract double getArea(); 
-   //protected void finalize() 
-   //{ 
-   //} 
+   protected void finalize() 
+   { 
+   } 
 } 
 final class Rectangle extends Shape 
 { 
@@ -25,9 +25,9 @@ final class Rectangle extends Shape
    { 
       return length*breadth; 
    } 
-   //protected void finalize() 
-   //{ 
-   //} 
+   protected void finalize() 
+   { 
+   } 
 } 
 final class Triangle extends Shape 
 { 
@@ -48,9 +48,9 @@ final class Triangle extends Shape
    { 
       return 0.5*b*h; 
    } 
-   //protected void finalize() 
-   //{ 
-  // } 
+   protected void finalize() 
+   { 
+   } 
 } 
 final class Hexagon extends Shape 
 { 
