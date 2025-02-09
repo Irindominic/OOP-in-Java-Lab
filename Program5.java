@@ -1,0 +1,90 @@
+abstract class Shape 
+{ 
+   abstract void numberOfSides(); 
+   abstract double getArea(); 
+   //protected void finalize() 
+   //{ 
+   //} 
+} 
+final class Rectangle extends Shape 
+{ 
+    protected int side;
+   protected double length; 
+   protected double breadth; 
+   Rectangle(int side,double length,double breadth) 
+   { 
+       this.side=side;
+      this.length=length; 
+      this.breadth=breadth; 
+   } 
+   public void numberOfSides() 
+   { 
+      System.out.println("Number of sides of rectangle:"+ side); 
+   } 
+   public double getArea() 
+   { 
+      return length*breadth; 
+   } 
+   //protected void finalize() 
+   //{ 
+   //} 
+} 
+final class Triangle extends Shape 
+{ 
+    protected int side;
+   protected double b; 
+   protected double h; 
+   Triangle(int side,double b,double h) 
+   { 
+       this.side=side;
+      this.b=b; 
+      this.h=h; 
+   } 
+   protected void numberOfSides() 
+   { 
+      System.out.println("Number of sides of triangle:"+side); 
+   } 
+   public double getArea() 
+   { 
+      return 0.5*b*h; 
+   } 
+   //protected void finalize() 
+   //{ 
+  // } 
+} 
+final class Hexagon extends Shape 
+{ 
+    protected int side;
+   protected double s; 
+   Hexagon(int side,double s) 
+   { 
+       this.side=side;
+      this.s=s; 
+   } 
+   public void numberOfSides() 
+   { 
+      System.out.println("Number of sides of hexagon:"+ side); 
+   } 
+   public double getArea() 
+   { 
+      return (s*s*3*1.73)/2; 
+   } 
+   protected void finalize() 
+   { 
+   } 
+} 
+public class Program5
+{ 
+   public static void main(String[] args) 
+   { 
+      Shape r=new Rectangle(4,4,5); 
+      r.numberOfSides(); 
+      System.out.println("Area of rectangle:"+r.getArea()); 
+      Shape t=new Triangle(3,3,5); 
+      t.numberOfSides(); 
+      System.out.println("Area of triangle:"+t.getArea()); 
+      Shape h=new Hexagon(6,3); 
+      h.numberOfSides(); 
+      System.out.println("Area of hexagon:"+h.getArea()); 
+   } 
+}
